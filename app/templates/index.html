@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>BulkEmailSender</title>
+</head>
+<body>
+    <div class="container mt-5 p-5 border rounded" style="width:500px">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success mb-3 text-center">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+        <h3 class="text-center">Bulk Email Sender</h3>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mt-2">
+                <label for="task_name">Task Name</label><br>
+                <input type="text" id="task_name" name="task_name" class="form-control" placeholder="Enter your task name...." required>
+            </div>
+            <div class="mt-2">
+                <label for="email_list">Email List</label><br>
+                <textarea id="email_list" name="email_list" rows="4" cols="50" class="form-control" placeholder="Enter email list like this e.g example@gmail.com, example@gmail.com" required></textarea>
+            </div>
+            <div class="mt-2">
+                <label for="email_subject">Email Subject</label><br>
+                <input type="text" id="email_subject" name="email_subject" class="form-control" placeholder="Enter your email subject...." required>
+            </div>
+            <div class="mt-2">
+                <label for="email_body">Email Body</label><br>
+                <textarea id="email_body" name="email_body" rows="4" cols="50"  class="form-control" placeholder="Enter your email body...." required></textarea>
+            </div>
+            <div class="mt-2">
+                <label for="email_file">Email File</label>
+                <input type="file" id="email_file" name="email_file" class="form-control" required>
+            </div>
+        
+            <div class="d-grid mt-4">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
