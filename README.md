@@ -16,7 +16,7 @@ This project enables users to send bulk emails with attachments using Django's e
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your_username/bulk-email-sender.git
+   git clone https://github.com/parthdadhaniya/BulkEmailSender.git
    ```
 
 2. **Install Dependencies**:
@@ -28,6 +28,7 @@ This project enables users to send bulk emails with attachments using Django's e
 3. **Configure Django Settings**:
 
    - Update `settings.py` with your email configuration details.
+   - Update `settings.py` with your celery configuration details.
 
 4. **Start Celery Worker**:
 
@@ -65,8 +66,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Authors
 
-- [Your Name](https://github.com/your_username)
+- [Parth Dadhaniya](https://github.com/parthdadhaniya)
 
 ## Contact
 
-For any inquiries or feedback, feel free to contact [your_email@example.com](mailto:your_email@example.com).
+For any inquiries or feedback, feel free to contact [parthdadhaniya079@gmail.com](mailto:parthdadhaniya079@gmail.com).
